@@ -1,12 +1,20 @@
 import React from 'react';
-
-import { Container } from './styles';
+import { useHistory } from 'react-router-dom'
+ import { Container } from './styles';
 
 export default function Header() {
+  const history = useHistory()
+  console.log(history)
+
+  function handleNavigate() {
+    history.push('/posts')
+  }
+
   return (
     <Container>
       <h1>JStack's Blog</h1>
       <button type="button">🌞</button>
+      <button onClick={handleNavigate} style={{color:'#fff'}}>Navegar</button>
     </Container>
   );
 }

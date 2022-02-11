@@ -16,10 +16,11 @@ export default function Layout() {
       <Nav >
         <Link to="/">Home</Link>
         <Link to="/posts">Posts</Link>
+        <Link to="/posts/1231">Posts pelo Id</Link>
       </Nav>
 
       <Routes />
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
